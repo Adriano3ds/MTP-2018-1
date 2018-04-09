@@ -1,0 +1,5 @@
+#Ignorando a pasta da aula de MTP pratica
+Pratica/
+
+#Ignorando os executaveis dos programas compilados
+*.exe
