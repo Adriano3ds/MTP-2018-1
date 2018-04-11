@@ -35,6 +35,6 @@ int main(){
         }
         i+=1;
     }
-    printf("A sequencia %seh multipla de 3", (estado?"nao ":""));
+    printf("Estado: %d\nA sequencia %s %seh multipla de 3", estado, bits, (estado?"nao ":""));
     return 0;
 }
