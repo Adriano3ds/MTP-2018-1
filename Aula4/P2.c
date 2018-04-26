@@ -1,3 +1,8 @@
+/*
+ *  Adriano Junior
+ *   11721EBI010
+ */
+
 #define ALMOSTZERO 0.0000000000000000001
 #include <stdio.h>
 
