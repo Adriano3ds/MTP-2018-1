@@ -14,7 +14,7 @@ float divide(int a, int b){
 }
 
 int main(){
-    int num[20], s=0, i;
+    int num[20] = {0}, s=0, i;
     while(s<5 || s>10){
         printf("\nDigite o numero de elementos: ");
         scanf("%d", &s);
