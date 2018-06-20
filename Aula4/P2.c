@@ -82,43 +82,43 @@ int main(){
         switch(opt){
             case 1:
                 printf("\nDigite o valor em binario(sem espacos): ");
-                scanf("%s", &inpt);
+                scanf("%s", (char*)&inpt);
                 printf("%d", baseToDec(2, inpt));
                 break;
             case 2:
                 printf("Digite o valor em binario(sem espacos): ");
-				scanf("%s", &inpt);
-				decToBase(baseToDec(2, inpt), 16);
+		scanf("%s", (char*)&inpt);
+		decToBase(baseToDec(2, inpt), 16);
                 break;
             case 3:
-				printf("\nDigite o valor em hexadecimal(sem usar 0x no comeco): ");
-                scanf("%s", &inpt);
+		printf("\nDigite o valor em hexadecimal(sem usar 0x no comeco): ");
+                scanf("%s", (char*)&inpt);
                 printf("%d", baseToDec(16, inpt));
                 break;
             case 4:
-				printf("\nDigite o valor em hexadecimal(sem usar 0x no comeco): ");
-				scanf("%s", &inpt);
-				decToBase(baseToDec(16, inpt), 2);
+		printf("\nDigite o valor em hexadecimal(sem usar 0x no comeco): ");
+		scanf("%s", (char*)&inpt);
+		decToBase(baseToDec(16, inpt), 2);
                 break;
             case 5:
-				printf("\nDigite o valor em decimal: ");
-				scanf("%s", &inpt);
-				decToBase(baseToDec(10, inpt), 2);
+		printf("\nDigite o valor em decimal: ");
+		scanf("%s", (char*)&inpt);
+		decToBase(baseToDec(10, inpt), 2);
                 break;
             case 6:
-				printf("\nDigite o valor em decimal: ");
-				scanf("%s", &inpt);
-				decToBase(baseToDec(10, inpt), 16);
+		printf("\nDigite o valor em decimal: ");
+		scanf("%s", (char*)&inpt);
+		decToBase(baseToDec(10, inpt), 16);
                 break;
             case 7:
-				printf("\nDigite o valor em octal: ");
-				scanf("%s", &inpt);
-				printf("%d", baseToDec(8, inpt));
+		printf("\nDigite o valor em octal: ");
+		scanf("%s", (char*)&inpt);
+		printf("%d", baseToDec(8, inpt));
                 break;
             case 8:
-				printf("\nDigite o valor em decimal: ");
-				scanf("%s", &inpt);
-				decToBase(baseToDec(10, inpt), 8);
+		printf("\nDigite o valor em decimal: ");
+		scanf("%s", (char*)&inpt);
+		decToBase(baseToDec(10, inpt), 8);
                 break;
             case 9:
                 exit = 1;
