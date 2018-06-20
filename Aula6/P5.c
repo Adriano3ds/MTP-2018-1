@@ -46,4 +46,5 @@ int main(){
 		}
 		opt=-1;
 	}
+	return 0;
 }
