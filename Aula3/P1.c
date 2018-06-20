@@ -10,7 +10,7 @@ int main(){
     char bits[256], ibits[256];
     printf("Por favor, digite a sequencia de 1's e 0's: ");
     fflush(stdin);
-    scanf("%s", &bits);
+    scanf("%s", (char *) &bits);
     for(i=0; bits[i] != '\0';i++){
         a+=1;
     }
@@ -35,6 +35,6 @@ int main(){
         }
         i+=1;
     }
-    printf("Estado: %d\nA sequencia %s %seh multipla de 3", estado, bits, (estado?"nao ":""));
+    printf("Estado: %d\nA sequencia %s %seh multipla de 3", estado, bits, (estado!=0?"nao ":""));
     return 0;
 }
