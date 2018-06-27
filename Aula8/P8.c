@@ -26,7 +26,6 @@ int main(){
 	vet = calloc(100, sizeof(float));
 	gera_numeros(vet, 100);
 	int opt=0;
-	printf("%f", p);
 	while(opt!=3){
 		printf("\n1 - Somatorio\n2 - Produtorio\n3 - Sair\n> ");
 		scanf("%d",&opt);
