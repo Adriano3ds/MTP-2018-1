@@ -74,20 +74,20 @@ int main(){
                     printf("\nProdutos em memoria: %d", np);
                     printf("\n0. Voltar");
                     for(i=0; i<np; i++)
-                        printf("\n%d. %s", i+1, produtos[i].nome);
+                        printf("\n%d. %s", i+1, (produtos + i)->nome);
                     printf("\n> ");
                     scanf("%d", &opt2);
                     getchar();
                     if(opt2>0 && opt2<=np)
-                        consulta(&produtos[opt2-1]);
+                        consulta(produtos + opt2-1);
                     if(opt2<0 || opt2>np)
                         printf("\nProduto inexistente!\n");
                 }
                 break;
             case 2:
             	np++;
-                produtos = (Produto *) realloc(produtos, np * sizeof(produtos));
-                cadastra(&produtos[np-1]);
+                produtos = (Produto *) realloc(produtos, np * sizeof(Produto));
+                cadastra(produtos + np-1);
                 printf("\nCadastrado com sucesso!\n");
                 while((c=getchar()) != '\n');
                 break;
@@ -98,8 +98,8 @@ int main(){
                 f = fopen(fil, "rb");
                 if(f){
                     fread(&np, sizeof(int), 1, f);
-                    produtos = (Produto *)calloc(np , sizeof(produtos));
-                    fread((void *)produtos, sizeof(produtos), np, f);
+                    produtos = (Produto *) calloc(np, sizeof(Produto));
+                    fread(produtos, sizeof(Produto), np, f);
                     fclose(f);
                     printf("\nArquivo contem %d produto(s). Leitura realizada com sucesso!\n", np);
                     while((c=getchar()) != '\n');
@@ -115,7 +115,7 @@ int main(){
             	f = fopen(fil, "wb");
                 if(f){
                     fwrite(&np, sizeof(int), 1, f);
-                    fwrite(produtos, sizeof(produtos), np, f);
+                    fwrite(produtos, sizeof(Produto), np, f);
                     fclose(f);
                     printf("\nProdutos armazenados em disco com sucesso!!\n");
                     while((c=getchar()) != '\n');
@@ -130,6 +130,6 @@ int main(){
                 break;
         }
     }
-    free(produtos);
+    if(produtos) free(produtos);
     return 0;
 }
